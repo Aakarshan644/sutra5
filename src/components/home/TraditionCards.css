@@ -1,0 +1,57 @@
+.tradition-section {
+  padding: var(--space-7) var(--space-3);
+  background: var(--sutra-obsidian);
+  text-align: center;
+}
+.tradition-heading {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: var(--text-h1);
+  color: var(--sutra-text-primary);
+  margin: 0 0 var(--space-5);
+}
+.tradition-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-2);
+  max-width: 1100px;
+  margin: 0 auto var(--space-5);
+}
+@media (max-width: 900px) {
+  .tradition-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.tradition-card {
+  background: var(--sutra-surface);
+  border: 1px solid var(--sutra-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-2);
+  transition: transform var(--duration-normal) var(--ease-standard);
+}
+.tradition-card:hover { transform: translateY(-4px); }
+.tradition-icon-wrap { margin-bottom: var(--space-2); display: flex; justify-content: center; }
+.tradition-num {
+  font-size: var(--text-micro);
+  color: var(--sutra-text-faint);
+  letter-spacing: 0.1em;
+}
+.tradition-name {
+  font-family: var(--font-serif);
+  color: var(--sutra-gold);
+  font-size: 1.1rem;
+  margin: var(--space-1) 0 2px;
+}
+.tradition-label {
+  font-size: var(--text-small);
+  color: var(--sutra-text-primary);
+  margin: 0 0 6px;
+}
+.tradition-desc {
+  font-size: var(--text-micro);
+  color: var(--sutra-text-muted);
+  line-height: var(--leading-normal);
+}
+.tradition-convergence {
+  font-family: var(--font-serif);
+  color: var(--sutra-text-muted);
+  font-size: 1rem;
+}

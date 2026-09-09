@@ -1,0 +1,37 @@
+:root {
+  --sutra-obsidian: #070707;
+  --sutra-charcoal: #11100F;
+  --sutra-ivory: #F2EBDD;
+  --sutra-gold: #C7A567;
+  --sutra-bronze: #8A6840;
+  --sutra-wine: #35151D;
+  --sutra-indigo: #16172C;
+
+  --sutra-text-primary: var(--sutra-ivory);
+  --sutra-text-muted: rgba(242, 235, 221, 0.6);
+  --sutra-text-faint: rgba(242, 235, 221, 0.4);
+  --sutra-border: rgba(199, 165, 103, 0.25);
+  --sutra-surface: var(--sutra-charcoal);
+  --sutra-surface-raised: #17150F;
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, sans-serif;
+
+  --text-hero: clamp(2rem, 5vw, 3.5rem);
+  --text-h1: clamp(1.75rem, 3.5vw, 2.5rem);
+  --text-h2: clamp(1.4rem, 2.5vw, 1.9rem);
+  --text-body: 1rem;
+  --text-small: 0.85rem;
+  --text-micro: 0.72rem;
+
+  --leading-tight: 1.15;
+  --leading-normal: 1.5;
+
+  --space-1: 8px; --space-2: 16px; --space-3: 24px;
+  --space-4: 32px; --space-5: 48px; --space-6: 64px; --space-7: 96px;
+
+  --radius-sm: 8px; --radius-md: 14px; --radius-lg: 24px;
+
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 200ms; --duration-normal: 400ms; --duration-slow: 800ms;
+}

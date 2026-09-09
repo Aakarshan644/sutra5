@@ -1,0 +1,24 @@
+.site-footer {
+  padding: var(--space-5) 6vw;
+  background: var(--sutra-charcoal);
+  border-top: 1px solid var(--sutra-border);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+.site-footer .footer-links {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.site-footer a {
+  color: var(--sutra-text-muted);
+  text-decoration: none;
+  font-size: var(--text-small);
+}
+.site-footer a:hover { color: var(--sutra-ivory); }
+.site-footer .footer-copy {
+  font-size: var(--text-micro);
+  color: var(--sutra-text-faint);
+}

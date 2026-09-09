@@ -1,0 +1,31 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 6vw;
+  background: rgba(7, 7, 7, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--sutra-border);
+}
+.site-header nav {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+}
+.site-header nav a {
+  color: var(--sutra-text-muted);
+  text-decoration: none;
+  font-size: var(--text-small);
+}
+.site-header nav a:hover { color: var(--sutra-ivory); }
+.site-header .nav-cta {
+  color: var(--sutra-obsidian);
+  background: var(--sutra-gold);
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+.site-header .nav-cta:hover { color: var(--sutra-obsidian); opacity: 0.9; }
