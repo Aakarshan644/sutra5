@@ -10,7 +10,7 @@ import Status from './pages/Status';
 import Report from './pages/Report';
 import Compatibility from './pages/Compatibility';
 import Login from './pages/Login';
-import Signup from './pages/Signup';
+import Register from './pages/Register';
 import Terms from './pages/Terms';
 import About from './pages/About';
 import Blog from './pages/Blog';
@@ -32,7 +32,7 @@ function App() {
           <Route path="/report/:token" element={<Report />} />
           <Route path="/compatibility" element={<Compatibility />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />

@@ -1,0 +1,101 @@
+.upload-page {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5) var(--space-3);
+  background: var(--sutra-obsidian);
+}
+.upload-card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--sutra-surface);
+  border: 1px solid var(--sutra-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+.upload-card h2 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: var(--text-h2);
+  color: var(--sutra-ivory);
+  margin: 0 0 8px;
+}
+.upload-card p.upload-sub {
+  font-size: var(--text-small);
+  color: var(--sutra-text-muted);
+  margin: 0 0 var(--space-4);
+}
+.upload-slot {
+  border: 1px dashed var(--sutra-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  margin-bottom: var(--space-3);
+  text-align: center;
+}
+.upload-slot-label {
+  font-size: var(--text-small);
+  color: var(--sutra-ivory);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.upload-slot-hint {
+  font-size: var(--text-micro);
+  color: var(--sutra-text-faint);
+  margin-bottom: var(--space-2);
+}
+.upload-preview {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  margin: 0 auto var(--space-2);
+  display: block;
+  border: 1px solid var(--sutra-border);
+}
+.upload-btn {
+  background: var(--sutra-gold);
+  color: var(--sutra-obsidian);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.upload-btn-secondary {
+  background: transparent;
+  color: var(--sutra-text-muted);
+  border: 1px solid var(--sutra-border);
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.upload-skip {
+  font-size: var(--text-micro);
+  color: var(--sutra-text-faint);
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.upload-continue {
+  width: 100%;
+  background: var(--sutra-gold);
+  color: var(--sutra-obsidian);
+  border: none;
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: var(--space-3);
+}
+.upload-continue:disabled {
+  background: var(--sutra-surface-raised);
+  color: var(--sutra-text-faint);
+  cursor: not-allowed;
+}

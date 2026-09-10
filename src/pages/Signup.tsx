@@ -1,8 +1,0 @@
-export default function Signup() {
-  return (
-    <div style={{ background: 'var(--sutra-obsidian)', minHeight: '70vh', color: 'var(--sutra-ivory)', padding: '48px', fontFamily: 'var(--font-sans)' }}>
-      <h1 style={{ fontFamily: 'var(--font-serif)', color: 'var(--sutra-gold)' }}>Signup</h1>
-      <p>Placeholder — form coming next.</p>
-    </div>
-  );
-}

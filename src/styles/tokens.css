@@ -35,3 +35,12 @@
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
   --duration-fast: 200ms; --duration-normal: 400ms; --duration-slow: 800ms;
 }
+/* tradition accents, added alongside the base palette above */
+:root {
+  --sutra-saffron: #D97B29;
+  --sutra-henna: #A85C3F;
+  --sutra-lapis: #3D5C8C;
+  --sutra-cinnabar: #B2402E;
+  --sutra-amethyst: #6B4A7C;
+  --sutra-parchment: #EDE3CE;
+}

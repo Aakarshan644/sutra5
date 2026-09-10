@@ -1,0 +1,79 @@
+.onboarding {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5) var(--space-3);
+  background: var(--sutra-obsidian);
+}
+.onboarding-card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--sutra-surface);
+  border: 1px solid var(--sutra-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+.onboarding-progress {
+  height: 3px;
+  background: var(--sutra-border);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: var(--space-3);
+}
+.onboarding-progress-fill {
+  height: 100%;
+  background: var(--sutra-gold);
+  transition: width var(--duration-normal) var(--ease-standard);
+}
+.onboarding-step-label {
+  font-size: var(--text-micro);
+  color: var(--sutra-gold);
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+.onboarding-card h2 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: var(--text-h2);
+  color: var(--sutra-ivory);
+  margin: 0 0 24px;
+}
+.onboarding-field { margin-bottom: var(--space-3); }
+.onboarding-field label {
+  display: block;
+  font-size: var(--text-micro);
+  color: var(--sutra-text-muted);
+  margin-bottom: 6px;
+}
+.onboarding-field input {
+  width: 100%;
+  background: var(--sutra-surface-raised);
+  border: 1px solid var(--sutra-border);
+  border-radius: var(--radius-sm);
+  padding: 13px 14px;
+  font-size: 0.9rem;
+  color: var(--sutra-ivory);
+  font-family: var(--font-sans);
+  box-sizing: border-box;
+}
+.onboarding-field input:focus {
+  outline: none;
+  border-color: var(--sutra-gold);
+}
+.onboarding-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-4);
+}
+.onboarding-btn {
+  padding: 13px 24px;
+  border-radius: var(--radius-sm);
+  border: none;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+.onboarding-btn-primary { background: var(--sutra-gold); color: var(--sutra-obsidian); }
+.onboarding-btn-secondary { background: transparent; color: var(--sutra-text-muted); border: 1px solid var(--sutra-border); }

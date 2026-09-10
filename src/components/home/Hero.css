@@ -9,35 +9,55 @@
   background: var(--sutra-obsidian);
 }
 .hero-copy { flex: 1 1 380px; max-width: 520px; }
-.hero-eyebrow {
-  font-size: var(--text-micro); letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--sutra-gold); margin: 0 0 18px; font-weight: 500;
+
+.stage {
+  flex: 1 1 380px;
+  min-width: 320px;
+  height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
-.hero-copy h1 {
-  font-family: var(--font-serif); font-weight: 500;
-  font-size: var(--text-hero); line-height: 1.1; margin: 0 0 20px;
-  color: var(--sutra-ivory);
+.rig {
+  width: 340px;
+  height: 340px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: transform 0.4s ease-out;
 }
-.hero-sub {
-  font-size: var(--text-body); line-height: var(--leading-normal);
-  color: var(--sutra-text-muted); max-width: 420px; margin: 0 0 var(--space-4);
+/* .ring {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
 }
-.hero-facts { display: flex; gap: var(--space-4); margin-bottom: var(--space-4); }
-.hero-fact b {
-  display: block; font-family: var(--font-serif); font-weight: 600;
-  font-size: 1.5rem; color: var(--sutra-gold);
-}
-.hero-fact span { font-size: var(--text-micro); color: var(--sutra-text-faint); text-transform: uppercase; letter-spacing: 0.06em; }
-.hero-cta {
-  display: inline-block; background: var(--sutra-gold); color: var(--sutra-obsidian);
-  font-weight: 600; font-size: 0.92rem; padding: 15px 26px; border-radius: var(--radius-sm);
-  text-decoration: none; border: none; cursor: pointer;
+.ring svg { width: 100%; height: 100%; display: block; } */
+/* Remove default margins, padding, and box borders */
+.ring {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  
+  /* Disable hardware compositing borders */
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
-.stage { flex: 1 1 380px; min-width: 320px; height: 460px; display: flex; align-items: center; justify-content: center; position: relative; }
-.rig { width: 340px; height: 340px; position: relative; transform-style: preserve-3d; transition: transform var(--duration-normal) var(--ease-standard); }
-.ring { position: absolute; inset: 0; transform-style: preserve-3d; }
-.ring svg { width: 100%; height: 100%; display: block; }
+/* Force SVG to render smoothly outside its bounding box */
+.ring svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible !important;
+  background: transparent !important;
+}
 
 .r1 { animation: spin1 34s linear infinite; animation-delay: -3s; }
 .r2 { animation: spin2 41s linear infinite reverse; animation-delay: -14s; }
@@ -52,13 +72,119 @@
 @keyframes spin5 { from { transform: rotateZ(0deg); } to { transform: rotateZ(360deg); } }
 
 .center-label {
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) translateZ(40px);
-  text-align: center; font-family: var(--font-serif); font-size: 0.85rem;
-  letter-spacing: 0.08em; color: var(--sutra-ivory); text-transform: uppercase; opacity: 0.85; pointer-events: none;
-}
-.center-label span { display: block; font-size: 0.62rem; color: var(--sutra-gold); margin-top: 4px; letter-spacing: 0.14em; }
-
-.ring-icon {
   position: absolute;
-  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(40px);
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--sutra-ivory);
+  opacity: 0.85;
+  pointer-events: none;
+}
+.center-label span {
+  display: block;
+  font-size: 0.62rem;
+  color: var(--sutra-gold);
+  margin-top: 4px;
+  letter-spacing: 0.14em;
+}
+
+/* fixes a solid-black-diamond rendering artifact: each .ring is actually a
+   square div (only the SVG drawing inside is circular), and rotating it
+   past 90deg in 3D shows its back face — without this, some browsers
+   render that back face as a solid black fill instead of hiding it */
+.ring {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.ring svg {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* fixes a solid-black-diamond rendering artifact: each .ring is actually a
+   square div (only the SVG drawing inside is circular), and rotating it
+   past 90deg in 3D shows its back face — without this, some browsers
+   render that back face as a solid black fill instead of hiding it */
+.ring {
+  backface-visibility: visible;
+  -webkit-backface-visibility: visible;
+}
+.ring svg {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* fixes a solid-black-diamond rendering artifact: each .ring is actually a
+   square div (only the SVG drawing inside is circular), and rotating it
+   past 90deg in 3D shows its back face — without this, some browsers
+   render that back face as a solid black fill instead of hiding it */
+.ring {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.ring svg {
+  backface-visibility: visible;
+  -webkit-backface-visibility: visible;
+}
+
+/* fixes a solid-black-diamond rendering artifact: each .ring is actually a
+   square div (only the SVG drawing inside is circular), and rotating it
+   past 90deg in 3D shows its back face — without this, some browsers
+   render that back face as a solid black fill instead of hiding it */
+.ring {
+  backface-visibility: visible;
+  -webkit-backface-visibility: hidden;
+}
+.ring svg {
+  backface-visibility: visible;
+  -webkit-backface-visibility: hidden;
+}
+
+/* fixes a solid-black-diamond rendering artifact: each .ring is actually a
+   square div (only the SVG drawing inside is circular), and rotating it
+   past 90deg in 3D shows its back face — without this, some browsers
+   render that back face as a solid black fill instead of hiding it */
+.ring {
+  backface-visibility: visible;
+  -webkit-backface-visibility: hidden;
+}
+.ring svg {
+  backface-visibility: visible;
+  -webkit-backface-visibility: hidden;
+}
+
+/* fixes a solid-black-diamond rendering artifact: each .ring is actually a
+   square div (only the SVG drawing inside is circular), and rotating it
+   past 90deg in 3D shows its back face — without this, some browsers
+   render that back face as a solid black fill instead of hiding it */
+.ring {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.ring svg {
+  backface-visibility: visible;
+  -webkit-backface-visibility: hidden;
+}
+
+/* fixes a solid-black-diamond rendering artifact: each .ring is actually a
+   square div (only the SVG drawing inside is circular), and rotating it
+   past 90deg in 3D shows its back face — without this, some browsers
+   render that back face as a solid black fill instead of hiding it */
+.ring {
+  backface-visibility: visible;
+  -webkit-backface-visibility: visible;
+}
+.ring svg {
+  backface-visibility: visible;
+  -webkit-backface-visibility: visible;
+}
+
+@media (max-width: 480px) {
+  .stage { height: 320px; }
+  .rig { width: 260px; height: 260px; }
+  .center-label { font-size: 0.7rem; }
 }
