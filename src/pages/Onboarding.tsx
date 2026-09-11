@@ -83,7 +83,7 @@ export default function Onboarding() {
           ) : <span />}
           <button
             onClick={next}
-            className="bg-gold text-obsidian font-semibold text-sm px-6 py-3 rounded-lg
+            className="bg-gold text-obsidian font-semibold text-base px-8 py-4 rounded-lg
                        transition-all duration-300 hover:shadow-[0_0_25px_rgba(199,165,103,0.4)] hover:-translate-y-0.5"
           >
             {step < TOTAL_STEPS ? 'Continue' : 'Continue to Upload'}
