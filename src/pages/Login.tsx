@@ -47,7 +47,7 @@ export default function Login() {
             <p className="text-ivory/50 text-sm text-center mt-6">
               No account? <Link to="/register" className="text-gold hover:underline">Register</Link>
             </p>
-            <p className="text-ivory/50 text-sm text-center mt-3">
+            <p className="text-starlight/50 text-sm text-center mt-3">
               <Link to="/" className="text-ivory/50 hover:text-gold transition-colors">← Back to home</Link>
             </p>
           </div>
